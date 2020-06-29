@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# pull docker image
-docker pull puckel/docker-airflow:1.10.9
+# build custom docker image
+docker build --rm -t puckel/docker-airflow:custom .
 
 # start docker compose
 docker-compose -f docker-compose-CeleryExecutor.yml up -d
